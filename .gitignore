@@ -1,0 +1,15 @@
+.coverage
+*.egg-info
+.cache/
+
+bin/
+dist/
+docs/_build/
+include/
+lib/
+man/
+share/
+local
+pip-selfcheck.json
+
+*pyc

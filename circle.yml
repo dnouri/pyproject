@@ -1,0 +1,15 @@
+machine:
+  python:
+    version: 3.5.1
+
+dependencies:
+  override:
+    - pip install -U pip
+    - pip install -r requirements.txt
+    - for i in {1..5}; do python setup.py dev && break || sleep 1; done
+
+test:
+  override:
+    - py.test --junitxml=$CIRCLE_TEST_REPORTS/pytest/junit.xml
+  post:
+    - cp .coverage $CIRCLE_ARTIFACTS
