@@ -17,7 +17,7 @@ Run this command to install dependencies::
 
 Then install this project::
 
-  python setup.py dev
+  pip install -e .
 
 To verify your installation, run tests::
 
