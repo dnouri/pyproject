@@ -19,12 +19,12 @@ here = os.path.abspath(os.path.dirname(__file__))
 try:
     README = open(os.path.join(here, 'README.rst'), encoding='utf-8').read()
 except IOError:
-    README = CHANGES = ''
+    README = ''
 
 
 setup(name='pyproject',
       version=version,
-      description='Pyproject package template',
+      description='pyproject package template',
       long_description=README,
       url='https://github.com/dnouri/pyproject',
       author='Daniel Nouri',
@@ -38,6 +38,10 @@ setup(name='pyproject',
           },
       entry_points={
           'console_scripts': [
+              # Create a script called myscript that will call
+              # function 'cli' from the 'main' module:
+
+              # 'myscript = pyproject.main:cli',
               ],
           },
       )
